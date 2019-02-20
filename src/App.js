@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
+// Components
+import NoteSpace from "./components/NoteSpace/NoteSpace_index";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">Teacup</header>
-        This is teacup
+        <h2>Tea</h2>
+        <NoteSpace />
       </div>
     );
   }
