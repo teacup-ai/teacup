@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "teacup-ai",
+    "Teacup": "teacup-ai"
+  }
+}
