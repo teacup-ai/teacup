@@ -1,70 +1,38 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @providesModule DraftEditor
- */
-
-/**
- * We inherit the height of the container by default
- */
-.DraftEditor/root,
-.DraftEditor/editorContainer,
-.public/DraftEditor/content {
-  height: inherit;
-  text-align: initial;
+* {
+  font-family: "Lato", sans-serif;
 }
 
-.public/DraftEditor/content[contenteditable="true"] {
-  -webkit-user-modify: read-write-plaintext-only;
+.NoteSpace--wrapper {
 }
 
-.DraftEditor/root {
-  position: relative;
+.NoteSpace--wrapper .DraftEditor-root {
+  background-color: #fffef7;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+  height: 300px;
+  overflow-y: scroll;
+  padding: 20px;
+  font-size: 18px;
+  font-family: "calibri", sans-serif;
 }
 
-/**
-  * Zero-opacity background used to allow focus in IE. Otherwise, clicks
-  * fall through to the placeholder.
-  */
-.DraftEditor/editorContainer {
-  background-color: rgba(255, 255, 255, 0);
-  /* Repair mysterious missing Safari cursor */
-  border-left: 0.1px solid transparent;
-  position: relative;
-  z-index: 1;
+.NoteSpace--wrapper .DraftEditor-editorContainer {
 }
 
-.public/DraftEditor/block {
-  position: relative;
-}
-
-.DraftEditor/alignLeft .public/DraftStyleDefault/block {
-  text-align: left;
-}
-
-.DraftEditor/alignLeft .public/DraftEditorPlaceholder/root {
-  left: 0;
-  text-align: left;
-}
-
-.DraftEditor/alignCenter .public/DraftStyleDefault/block {
-  text-align: center;
-}
-
-.DraftEditor/alignCenter .public/DraftEditorPlaceholder/root {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-}
-
-.DraftEditor/alignRight .public/DraftStyleDefault/block {
+.NoteSpace--wrapper .toolbar {
+  width: 80%;
+  background-color: lightsteelblue;
+  padding: 10px 20px;
+  margin: auto;
+  top: 45px;
   text-align: right;
 }
 
-.DraftEditor/alignRight .public/DraftEditorPlaceholder/root {
-  right: 0;
-  text-align: right;
+.NoteSpace--wrapper .toolbar button {
+  border: 1px solid black;
+  padding: 5px;
+  margin-right: 4px;
+  background-color: black;
+  color: white;
 }
